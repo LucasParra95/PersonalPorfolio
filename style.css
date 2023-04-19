@@ -54,6 +54,7 @@ body{
 
 .home-section.active, 
 .project-section.active,
+.skills-section.active,
 .about-section.active,
 .contact-section.active{
     position: relative;
@@ -251,9 +252,15 @@ body{
 
 /* skills section */
 
-.skill-section{
-    position: relative;
-    margin: 100px 0;
+.skills-section{
+    width: 100%;
+    min-height: 100vh;
+    padding: 150px 100px 0;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    transition: 1s;
+    opacity: 0;
 }
 
 .heading{
