@@ -125,8 +125,9 @@ body{
 }
 
 .project-card{
-    height: 400px;
+    height: 500px;
     position: relative;
+    margin-bottom: 2rem;
 }
 
 .project-img{
@@ -137,6 +138,7 @@ body{
     left: 0;
     object-fit: cover;
     transition: .5s;
+    border-radius: 10px;
 }
 
 .project-content{
@@ -161,10 +163,11 @@ body{
 }
 
 .project-btns{
-    display: grid;
+    display: flex;
 }
 
 .project-btn{
+    width: 50%;
     height: 40px;
     text-transform: capitalize;
     font-size: 18px;
@@ -172,6 +175,7 @@ body{
     background: #000;
     color: #fff;
     cursor: pointer;
+    margin: 0.2rem;
 }
 .project-btn a{
     text-decoration-style:none;
