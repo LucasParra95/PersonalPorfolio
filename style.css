@@ -29,11 +29,13 @@ body{
     align-items: center;
     z-index: 9;
     background: #1a1a1a;
+    height: min-content;
 }
 
 .links-group{
     list-style: none;
     display: flex;
+    white-space: nowrap;
 }
 
 .link a{
@@ -41,7 +43,7 @@ body{
     opacity: 0.5;
     text-decoration: none;
     text-transform: capitalize;
-    padding: 10px 30px;
+    /* padding: 10px 30px; */
     margin: 0 20px;
     line-height: 80px;
     transition: .5s;
@@ -60,6 +62,12 @@ body{
     position: relative;
     opacity: 1;
     z-index: 8;
+}
+
+.skills-section.active .skill-card {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
 }
 
 /* home section */
@@ -121,8 +129,7 @@ body{
 
 .project-container{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 100px;
+    grid-template-columns: repeat(1, 1fr);
 }
 
 .project-card{
@@ -152,8 +159,10 @@ body{
 
 .project-title{
     font-size: 50px;
+    color: #fff;
+    text-shadow: #232323 2px 2px 3px;
     text-align: center;
-    font-weight: 300;
+    font-weight: 380;
 }
 
 .project-info{
@@ -161,6 +170,7 @@ body{
     font-size: 20px;
     line-height: 30px;
     text-align: center;
+    text-shadow: #232323 2px 2px 3px;
 }
 
 .project-btns{
@@ -275,8 +285,9 @@ body{
     width: 95%;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 100px;
+    /* grid-template-columns: repeat(1, 1fr); */
+    gap: 20px;
+    /* grid-gap: 100px; */
     color: #fff;
 } 
 
@@ -284,12 +295,18 @@ body{
     position: relative;
     background: #aea2daa9;
     border-radius: 20px;
+    opacity: 0;
+    filter: blur(4px);
+    transform: translateX(-100%);
+    transition: all 1s;
 }
 
 .skill-img{
     display: block;
     margin: auto;
     height: 200px;
+    width: 90%;
+    object-fit: contain;
 }
 
 .skill-name{
@@ -482,3 +499,20 @@ body{
     height: 100%;
     width: 100%;
 }
+
+@media (min-width: 600px) {
+    .project-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 100px;
+    }
+    .skills-container{
+        width: 95%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        /* grid-gap: 100px; */
+        color: #fff;
+    } 
+  }
