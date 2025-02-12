@@ -12,11 +12,11 @@ a:link, a:visited, a:active {
 body{
     width: 100%;
     max-width: 1440px;
-    display: block;
+    display: grid;
     margin: auto;
     min-height: 100vh;
     background: #191919;
-    font-family: sans-serif;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .navbar{
@@ -42,7 +42,6 @@ body{
     color: #fff;
     opacity: 0.5;
     text-decoration: none;
-    text-transform: capitalize;
     /* padding: 10px 30px; */
     margin: 0 20px;
     line-height: 80px;
@@ -52,6 +51,13 @@ body{
 
 .link a:hover, .link.active a{
     opacity: 1;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
 }
 
 .home-section.active, 
@@ -79,14 +85,14 @@ body{
     display: flex;
     align-items: center;
     position: fixed;
-    top: 0;
+    top: 5rem;
     opacity: 0;
     transition: 1s;
 }
 
 .presentation{
     color: #fff;
-    font-size: 80px;
+    font-size: 3rem;
     font-weight: 300;
 }
 
@@ -100,7 +106,7 @@ body{
     top: 0;
     right: 0;
     height: 100vh;
-    width: 70%;
+    width: 45%;
     object-fit: cover;
     opacity: 0.2;
 }
@@ -206,7 +212,7 @@ body{
 .about-section{
     width: 100%;
     min-height: 100vh;
-    padding: 150px 100px 0;
+    padding: 5rem 2rem 0;
     align-items: center;
     position: fixed;
     top: 0;
@@ -216,13 +222,15 @@ body{
 
 .about{
     width: 100%;
-    display: grid;
-    grid-template-columns: 30% 65%;
-    grid-gap: 40px;
+    /* display: grid;
+    grid-template-columns: 30% 65%; 
+    grid-gap: 40px;*/
 }
 
 .about-img-container{
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .about-info{
@@ -233,9 +241,9 @@ body{
 }
 
 .about-img{
-    width: 100%;
-    height: 100%;
-    position: absolute;
+    /* width: 40%; */
+    height: 15rem;
+    /* position: absolute; */
     top: 0;
     left: 0;
     object-fit: cover;
@@ -265,7 +273,7 @@ body{
 .skills-section{
     width: 100%;
     min-height: 100vh;
-    padding: 150px 100px 0;
+    padding: 5rem 0 0;
     align-items: center;
     position: fixed;
     top: 0;
@@ -278,13 +286,14 @@ body{
     font-size: 60px;
     color: #fff;
     font-weight: 300;
-    margin-bottom: 100px;
+    margin-bottom: 4rem;
 }
 
 .skills-container{
     width: 95%;
     margin: auto;
     display: grid;
+    justify-items: center;
     /* grid-template-columns: repeat(1, 1fr); */
     gap: 20px;
     /* grid-gap: 100px; */
@@ -292,8 +301,9 @@ body{
 } 
 
 .skill-card{
+    width: 85%;
     position: relative;
-    background: #aea2daa9;
+    background: #aea2da40;
     border-radius: 20px;
     opacity: 0;
     filter: blur(4px);
@@ -310,7 +320,7 @@ body{
 }
 
 .skill-name{
-    font-size: 30px;
+    font-size: 15px;
     font-weight: 300;
     text-align: center;
     margin: 30px 0 20px;
@@ -319,7 +329,7 @@ body{
 .skill-info{
     text-align: center;
     opacity: .7;
-    font-size: 18px;
+    font-size: 12px;
     line-height: 30px;
 }
 
@@ -516,3 +526,46 @@ body{
         color: #fff;
     } 
   }
+
+  @media screen and (max-width: 768px) {
+    .navbar {
+        justify-content: flex-start;
+        padding: 0.5rem 1rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .links-group {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #1a1a1a;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        /* transform: translateY(-125%);
+        transition: transform 0.3s ease-in-out; */
+    }
+
+    /* Cuando se active, el menú aparecerá */
+    .links-group.active {
+        display: flex;
+    }
+
+    .link {
+        padding: 10px 0;
+    }
+
+    .link a {
+        font-size: 18px;
+        line-height: normal;
+    }
+
+    .home-section {
+        padding: 0;
+    }
+}

@@ -12,9 +12,12 @@
 
     <!-- navbar -->
     <nav class="navbar">
+        <div class="menu-toggle" id="mobile-menu">
+            &#9776; <!-- Ícono de menú hamburguesa -->
+        </div>
         <ul class="links-group">
             <li class="link active"><a href="#">Home</a></li>
-            <li class="link"><a href="#">Sobre Mi</a></li>
+            <li class="link"><a href="#">Sobre mi</a></li>
             <li class="link"><a href="#">Habilidades y Experiencias</a></li>
             <li class="link"><a href="#">Proyectos</a></li>
             <li class="link"><a href="#">Contacto</a></li>
@@ -42,21 +45,16 @@
                 <form method="get" action="CV LucasParra.pdf" target="_blank">
                     <button class="cv-btn" type="submit">Descargar CV</button>
                  </form>
-                <!-- <button class="cv-btn"><a href="./CV LucasParra.pdf" download="CV Lucas Parra.pdf">Descargar CV</a></button> -->
             </div>
-            <p class="about-info">Nací el 20 de Septiembre de 1995 en la ciudad de San Carlos de Bariloche, Argentina. <br/>
-                Siempre fui un chico muy curioso, interesado en conocer como era el funcionamiento de las cosas que me rodeaban. 
-                Es por eso que de niño desarmaba mis juguetes para entender los mecanismos que tenian dentro, para luego rearmarlos <br/>
-                Fui al colegio Primo Capraro de mi ciudad natal donde aprendí inglés y alemán, lo que me permitió participar de un intecambio estudiantil de tres meses de duración con una escuela
-                en la ciudad alemana de Bensheim. Allí conocí gente de todo el mundo y aprendí a respetar las costumbres y culturas diferentes a la mia. <br/>
-                Me recibi en 2013 de Bachiller en Ciencias Exactas y Naturales, y me mude a la ciudad de La Plata, donde resido actualmente, para estudiar ingeniería mecánica en la
-                Universidad Nacional de La Plata. El paso por esta institución me posibilitó crecer mucho desde lo personal, a la vez que contribuyo a que desarrolle la capacidad de 
-                resolver problemas mediante el pensamiento analítico y la lógica. <br />
-                Pero habiendo avanzado en la carrera entendí que la labor diaria del ingeniero no era algo que llamara realmente mi atención, por lo que decidí orientar mis estudios hacia otro área
-                que siempre habia sido de mi interes, pero que no habia profundizado, como lo es la programación. <br />
-                Comence con un curso brindado por la Fundacion Telefonica de Introduccion a la Programacion, para ver si me gustaba y si era lo que esperaba,
-                y la realidad es que me fascinó el universo de posibilidades que esto me abrió. Es por ello que en 2022 comencé el curso de FullStack Developer brindado por Henry,
-                el cual finalicé satisfactoriamente al cabo de 5 meses.</p>
+            <div class="about-info">
+                <p><strong>La curiosidad siempre ha sido mi motor.</strong> Desde niño desmontaba juguetes para entender sus mecanismos, lo que despertó en mí un interés profundo por la tecnología y la resolución de problemas.</p>
+
+                <p>Estudié <strong>Ingeniería Mecánica</strong> en la Universidad Nacional de La Plata, donde adquirí pensamiento lógico y habilidades analíticas que hoy aplico al desarrollo de software.</p>
+
+                <p>Buscando un camino que realmente me apasionara, descubrí la programación y me certifiqué como <strong>Full Stack Developer</strong> en Henry, explorando un mundo de posibilidades ilimitadas.</p>
+
+                <p>Hoy, combino mi capacidad analítica y creatividad para desarrollar <strong>soluciones tecnológicas innovadoras</strong> que optimizan procesos y mejoran la experiencia del usuario.</p>
+            </div>
         </div>
 
         <!-- skills -->
@@ -113,7 +111,7 @@
             </div>
 
 
-        <!-- timeline -->
+         <!-- timeline  -->
         <div class="timeline">
             <h1 class="heading">Educacion y Experiencias</h1>
             <div class="card-timeline">
@@ -149,7 +147,7 @@
 
     <!-- seccion proyectos -->
 
-    <section class="project-section">
+    <!-- <section class="project-section">
         <h1 class="projects">Algunos de mis Proyectos</h1>
         <div class="project-container">
             <div class="project-card">
@@ -208,11 +206,11 @@
                     </div>
                 </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- seccion contactos -->
 
-    <section class="contact-section">
+    <!-- <section class="contact-section">
         <form class="contact-form" action="mailto:lucasandresparra@gmail.com">
             <input type="text" name="name" id="name" autocomplete="off" placeholder="Nombre">
             <input type="text" name="email" id="email" autocomplete="off" placeholder="email">
@@ -227,7 +225,7 @@
                 <button class="github" type="submit"><img src="./img/github.png" class="social-media-img" alt="GitHub link"></button>
             </form>
         </div>
-    </section>
+    </section> -->
 
     <script src="app.js"></script>
 </body>
